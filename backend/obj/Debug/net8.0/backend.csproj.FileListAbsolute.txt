@@ -157,3 +157,4 @@
 /home/nakamo/work/csharpReact/Sample/backend/obj/Debug/net8.0/backend.pdb
 /home/nakamo/work/csharpReact/Sample/backend/obj/Debug/net8.0/backend.genruntimeconfig.cache
 /home/nakamo/work/csharpReact/Sample/backend/obj/Debug/net8.0/ref/backend.dll
+/home/nakamo/work/csharpReact/Sample/backend/obj/Debug/net8.0/backend.sourcelink.json
