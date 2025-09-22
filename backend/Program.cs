@@ -1,4 +1,5 @@
 using backend.Data;
+using backend.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +17,8 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
-
+// サービス登録
+builder.Services.AddScoped<TodoService>();
 builder.Services.AddControllers();
 
 var app = builder.Build();
