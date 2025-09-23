@@ -17,9 +17,9 @@ public class TodoItemsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<TodoItemResponse>> GetTodos()
+    public async Task<ActionResult<IEnumerable<TodoItemResponse>>> GetTodos()
     {
-        var todos = _service.GetTodos();
+        var todos = await _service.GetTodosAsync();
         return Ok(todos);
     }
 

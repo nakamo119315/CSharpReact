@@ -1,35 +1,29 @@
 namespace backend.Services;
 
-using Data;
-using Models;
 using Dtos;
 using Repositories;
 using Mappers;
+using Models;
 
-
-// TodoService.cs
 public class TodoService
 {
-    private readonly AppDbContext _context;
+    private readonly ITodoRepository _repository;
 
-    public TodoService(AppDbContext context)
+    public TodoService(ITodoRepository repository)
     {
-        _context = context;
+        _repository = repository;
     }
 
     public async Task<TodoItemResponse> CreateTodoAsync(TodoItemCreateRequest request)
     {
         var entity = TodoItemMapper.ToEntity(request);
-        _context.TodoItems.Add(entity);
-        await _context.SaveChangesAsync();
-        return TodoItemMapper.ToResponse(entity);
+        var saved = await _repository.AddAsync(entity);
+        return TodoItemMapper.ToResponse(saved);
     }
 
-    public IEnumerable<TodoItemResponse> GetTodos()
+    public async Task<IEnumerable<TodoItemResponse>> GetTodosAsync()
     {
-        var entities = _context.TodoItems.OrderByDescending(t => t.CreatedAt).ToList();
+        var entities = await _repository.GetAllAsync();
         return TodoItemMapper.ToResponseList(entities);
     }
 }
-
-
