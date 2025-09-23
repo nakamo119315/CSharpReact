@@ -1,8 +1,8 @@
 // File: backend/Services/ExternalTodoService.cs
-namespace backend.Services;
+namespace backend.Application.Services;
 
-using backend.Clients;
-using backend.Dtos;
+using Interfaces;
+using Dtos;
 
 public class ExternalTodoService
 {

@@ -1,6 +1,7 @@
-using backend.Data;
-using backend.Services;
 using Microsoft.EntityFrameworkCore;
+using backend.Infrastructure.Persistence;
+using backend.Application.Services;
+using backend.Domain.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+// リポジトリ登録
+builder.Services.AddScoped<ITodoRepository, TodoRepository>();
 // サービス登録
 builder.Services.AddScoped<TodoService>();
 builder.Services.AddControllers();

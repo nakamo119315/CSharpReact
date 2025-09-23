@@ -1,8 +1,8 @@
 // TodoItemMapper.cs
-namespace backend.Mappers;
+namespace backend.Application.Mappers;
 
 using Dtos;
-using Models;
+using Domain.Entities;
 public static class TodoItemMapper
 {
     public static TodoItemResponse ToResponse(TodoItem entity)

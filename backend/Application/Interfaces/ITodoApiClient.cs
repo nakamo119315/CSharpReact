@@ -1,7 +1,7 @@
 // File: backend/Clients/ITodoApiClient.cs
-namespace backend.Clients;
+namespace backend.Application.Interfaces;
 
-using backend.Dtos;
+using Dtos;
 
 public interface ITodoApiClient
 {

@@ -1,8 +1,9 @@
 // File: backend/Clients/TodoApiClient.cs
-namespace backend.Clients;
+namespace backend.Infrastructure.Clients;
 
 using System.Net.Http.Json;
-using backend.Dtos;
+using Application.Dtos;
+using Application.Interfaces;
 
 public class TodoApiClient : ITodoApiClient
 {

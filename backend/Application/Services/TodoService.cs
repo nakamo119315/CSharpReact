@@ -1,9 +1,9 @@
-namespace backend.Services;
+namespace backend.Application.Services;
 
 using Dtos;
-using Repositories;
 using Mappers;
-using Models;
+using Domain.Repositories;
+using Domain.Entities;
 
 public class TodoService
 {

@@ -1,9 +1,10 @@
 // File: TodoApp.Tests/ExternalTodoServiceTests.cs
 using Xunit;
 using Moq;
-using backend.Services;
-using backend.Clients;
-using backend.Dtos;
+using backend.Application.Services;
+using backend.Application.Interfaces;
+using backend.Application.Dtos;
+using backend.Domain.Entities;
 
 public class ExternalTodoServiceTests
 {

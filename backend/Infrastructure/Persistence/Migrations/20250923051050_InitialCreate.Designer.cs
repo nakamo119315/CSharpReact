@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using backend.Data;
+using backend.Infrastructure.Persistence;
 
 #nullable disable
 
-namespace backend.Migrations
+namespace backend.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250922051257_AddCreatedAtToTodo")]
-    partial class AddCreatedAtToTodo
+    [Migration("20250923051050_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace backend.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.9");
 
-            modelBuilder.Entity("backend.Models.TodoItem", b =>
+            modelBuilder.Entity("backend.Domain.Entities.TodoItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

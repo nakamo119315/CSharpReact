@@ -1,7 +1,6 @@
+namespace backend.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using backend.Models;
-
-namespace backend.Data;
+using Domain.Entities;
 
 public class AppDbContext : DbContext
 {

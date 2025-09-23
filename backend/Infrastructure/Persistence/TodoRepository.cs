@@ -1,14 +1,8 @@
-namespace backend.Repositories;
+namespace backend.Infrastructure.Persistence;
 
 using Microsoft.EntityFrameworkCore;
-using Data;
-using Models;
-
-public interface ITodoRepository
-{
-    Task<TodoItem> AddAsync(TodoItem todo);
-    Task<List<TodoItem>> GetAllAsync();
-}
+using Domain.Entities;
+using Domain.Repositories;
 
 public class TodoRepository : ITodoRepository
 {

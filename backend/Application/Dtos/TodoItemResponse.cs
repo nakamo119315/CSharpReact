@@ -1,4 +1,4 @@
-namespace backend.Dtos;
+namespace backend.Application.Dtos;
 
 public class TodoItemResponse
 {

@@ -1,9 +1,9 @@
 // File: backend/Controllers/ExternalTodoController.cs
-namespace backend.Controllers;
+namespace backend.Presentation.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using backend.Services;
-using backend.Dtos;
+using Application.Services;
+using Application.Dtos;
 
 [ApiController]
 [Route("api/external-todos")]

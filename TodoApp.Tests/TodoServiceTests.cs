@@ -2,12 +2,13 @@ namespace TodoApp.Tests;
 
 using Xunit;
 using Moq;
-using backend.Services;
-using backend.Repositories;
-using backend.Models;
-using backend.Dtos;
+using backend.Application.Services;
+using backend.Domain.Repositories;
+using backend.Infrastructure.Persistence;
+using backend.Application.Dtos;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using backend.Domain.Entities;
 
 public class TodoServiceTests
 {

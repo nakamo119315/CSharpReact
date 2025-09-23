@@ -3,11 +3,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using backend.Data;
+using backend.Infrastructure.Persistence;
 
 #nullable disable
 
-namespace backend.Migrations
+namespace backend.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace backend.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.9");
 
-            modelBuilder.Entity("backend.Models.TodoItem", b =>
+            modelBuilder.Entity("backend.Domain.Entities.TodoItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
