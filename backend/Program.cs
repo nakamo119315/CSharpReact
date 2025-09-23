@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using backend.Infrastructure.Persistence;
+using backend.Infrastructure.Clients;
 using backend.Application.Services;
+using backend.Application.Interfaces;
 using backend.Domain.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +24,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<ITodoRepository, TodoRepository>();
 // サービス登録
 builder.Services.AddScoped<TodoService>();
+builder.Services.AddHttpClient<IGeminiClient, GeminiClient>();
+builder.Services.AddScoped<GeminiService>();
 builder.Services.AddControllers();
 
 var app = builder.Build();
